@@ -1,8 +1,5 @@
 package Ajax;
 
-/**
- * Created by deity on 16-11-12.
- */
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -37,7 +34,7 @@ public class AjaxServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         String old = request.getParameter("username").trim();
-        if (null == old || "".equals(old)) {
+        if ("".equals(old)) {
             out.println("<strong>用户名不能为空！</strong>");
         } else {
             if ("zyh".equals(old)) {
